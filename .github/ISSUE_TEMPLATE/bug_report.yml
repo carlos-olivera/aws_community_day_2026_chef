@@ -1,0 +1,47 @@
+name: Bug report
+description: Report a reproducible problem in the local demo, frontend, or AWS path.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve Chef Andino. Do not include credentials,
+        passphrases, tokens, account identifiers, or participant data.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Offline Python demo
+        - Frontend
+        - AWS CDK infrastructure
+        - AgentCore / Bedrock path
+        - Documentation or data corpus
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Include the smallest safe sequence that demonstrates the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS and Python, Node.js, npm, and CDK versions when relevant.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, secrets, account identifiers, and participant data.
+          required: true

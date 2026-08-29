@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Private security report
+    url: https://github.com/carlos-olivera/aws_community_day_2026_chef/security/advisories/new
+    about: Report vulnerabilities privately; never publish credentials or exploit details.
