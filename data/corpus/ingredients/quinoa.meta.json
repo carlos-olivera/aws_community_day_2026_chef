@@ -1,0 +1,9 @@
+{
+  "type": "ingredient",
+  "name": "Quinoa",
+  "ingredient_id": "quinoa",
+  "tags": [
+    "bolivian",
+    "ingredient"
+  ]
+}

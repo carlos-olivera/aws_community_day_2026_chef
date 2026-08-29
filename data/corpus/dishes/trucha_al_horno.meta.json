@@ -1,0 +1,26 @@
+{
+  "type": "dish",
+  "name": "Trucha del Titicaca al Horno",
+  "course": "main",
+  "tags": [
+    "fish",
+    "titicaca",
+    "bolivian"
+  ],
+  "ingredients": [
+    "trout",
+    "potato",
+    "lime",
+    "garlic"
+  ],
+  "allergens": [
+    "fish"
+  ],
+  "dietary_flags": [
+    "gluten_free",
+    "lactose_free"
+  ],
+  "spice_level": "mild",
+  "bolivian_origin": true,
+  "complexity": 2
+}

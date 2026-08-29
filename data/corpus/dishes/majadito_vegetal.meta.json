@@ -1,0 +1,28 @@
+{
+  "type": "dish",
+  "name": "Majadito Vegetal",
+  "course": "main",
+  "tags": [
+    "santa cruz",
+    "rice",
+    "events",
+    "bolivian"
+  ],
+  "ingredients": [
+    "rice",
+    "tomato",
+    "onion",
+    "bell_pepper",
+    "garlic"
+  ],
+  "allergens": [],
+  "dietary_flags": [
+    "vegan",
+    "vegetarian",
+    "gluten_free",
+    "lactose_free"
+  ],
+  "spice_level": "mild",
+  "bolivian_origin": true,
+  "complexity": 2
+}

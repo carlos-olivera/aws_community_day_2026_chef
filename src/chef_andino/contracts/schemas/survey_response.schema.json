@@ -1,0 +1,112 @@
+{
+  "$id": "https://chef-andino.example/schemas/survey_response.schema.json",
+  "additionalProperties": false,
+  "description": "One anonymous audience answer. Enums only - no names, no free text.",
+  "properties": {
+    "response_id": {
+      "description": "Random UUID. Never tied to a person.",
+      "title": "Response Id",
+      "type": "string"
+    },
+    "event_id": {
+      "title": "Event Id",
+      "type": "string"
+    },
+    "submitted_at": {
+      "format": "date-time",
+      "title": "Submitted At",
+      "type": "string"
+    },
+    "diet": {
+      "enum": [
+        "none",
+        "vegetarian",
+        "vegan"
+      ],
+      "title": "Diet",
+      "type": "string"
+    },
+    "lactose_intolerant": {
+      "title": "Lactose Intolerant",
+      "type": "boolean"
+    },
+    "gluten_free": {
+      "title": "Gluten Free",
+      "type": "boolean"
+    },
+    "allergies": {
+      "items": {
+        "enum": [
+          "peanut",
+          "tree_nuts",
+          "shellfish",
+          "fish",
+          "egg",
+          "soy"
+        ],
+        "type": "string"
+      },
+      "title": "Allergies",
+      "type": "array"
+    },
+    "spice_level": {
+      "description": "Hottest level this person enjoys.",
+      "enum": [
+        "mild",
+        "medium",
+        "hot"
+      ],
+      "title": "Spice Level",
+      "type": "string"
+    },
+    "cuisine_preference": {
+      "enum": [
+        "traditional_bolivian",
+        "andean_fusion",
+        "international",
+        "no_preference"
+      ],
+      "title": "Cuisine Preference",
+      "type": "string"
+    },
+    "preferred_ingredients": {
+      "items": {
+        "enum": [
+          "quinoa",
+          "potato",
+          "corn",
+          "aji_amarillo",
+          "llama_meat",
+          "trout",
+          "chuno",
+          "broad_beans",
+          "amaranth",
+          "peanut"
+        ],
+        "type": "string"
+      },
+      "maxItems": 3,
+      "title": "Preferred Ingredients",
+      "type": "array"
+    },
+    "consent": {
+      "const": true,
+      "description": "Must be literally true: no consent, no parse.",
+      "title": "Consent",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "response_id",
+    "event_id",
+    "submitted_at",
+    "diet",
+    "lactose_intolerant",
+    "gluten_free",
+    "spice_level",
+    "cuisine_preference",
+    "consent"
+  ],
+  "title": "SurveyResponse",
+  "type": "object"
+}

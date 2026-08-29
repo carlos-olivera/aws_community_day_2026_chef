@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=83"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chef-andino"
+version = "0.1.0"
+description = "Chef Andino - an educational autonomous agent that plans an event menu (AWS Community Day reference project)"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+authors = [{ name = "Carlos Olivera Terrazas" }]
+keywords = ["agents", "amazon-bedrock", "aws", "education", "rag"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Education",
+]
+dependencies = [
+    "pydantic>=2.13.5",
+    "typer>=0.27.2",
+    "rich>=15.0",
+    "fastapi>=0.141.1",
+    "uvicorn>=0.52.4",
+    "pyyaml>=6.0.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.3",
+    "httpx2>=2.12",
+    "ruff>=0.14.13",
+]
+aws = [
+    "boto3>=1.43.83",
+]
+
+[project.urls]
+Homepage = "https://github.com/carlos-olivera/aws_community_day_2026_chef"
+Documentation = "https://github.com/carlos-olivera/aws_community_day_2026_chef/tree/main/docs"
+Issues = "https://github.com/carlos-olivera/aws_community_day_2026_chef/issues"
+Source = "https://github.com/carlos-olivera/aws_community_day_2026_chef"
+
+[project.scripts]
+chef = "chef_andino.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+chef_andino = ["policy/policies.yaml", "planner/prompts/*.md", "contracts/schemas/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+# E/F: pycodestyle + pyflakes basics. I: import sorting.
+# D: docstrings on modules/classes/functions inside src/ (teaching requirement).
+select = ["E", "F", "I", "D"]
+ignore = [
+    "D203", # one-blank-line-before-class (conflicts with D211)
+    "D213", # multi-line-summary-second-line (conflicts with D212)
+    "D401", # imperative-mood: descriptive one-liners are fine here
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests and scripts do not need full docstring coverage.
+"tests/**" = ["D"]
+"scripts/**" = ["D103"]
+"infra/**" = ["D"]

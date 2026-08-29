@@ -1,0 +1,23 @@
+{
+  "type": "dish",
+  "name": "Humintas al Horno",
+  "course": "breakfast",
+  "tags": [
+    "breakfast",
+    "corn",
+    "bolivian"
+  ],
+  "ingredients": [
+    "corn",
+    "cheese",
+    "sugar"
+  ],
+  "allergens": [],
+  "dietary_flags": [
+    "vegetarian",
+    "gluten_free"
+  ],
+  "spice_level": "mild",
+  "bolivian_origin": true,
+  "complexity": 2
+}

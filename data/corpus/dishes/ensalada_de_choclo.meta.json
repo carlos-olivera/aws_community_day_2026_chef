@@ -1,0 +1,26 @@
+{
+  "type": "dish",
+  "name": "Ensalada de Choclo",
+  "course": "starter",
+  "tags": [
+    "salad",
+    "corn",
+    "bolivian"
+  ],
+  "ingredients": [
+    "corn",
+    "tomato",
+    "onion",
+    "lime"
+  ],
+  "allergens": [],
+  "dietary_flags": [
+    "vegan",
+    "vegetarian",
+    "gluten_free",
+    "lactose_free"
+  ],
+  "spice_level": "mild",
+  "bolivian_origin": true,
+  "complexity": 1
+}

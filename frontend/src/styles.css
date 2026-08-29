@@ -1,0 +1,88 @@
+/* One small stylesheet - the frontend exists to make the demo tangible,
+   not to teach CSS. Warm Andean-textile accents on a clean base. */
+
+:root {
+  --accent: #c0392b;
+  --gold: #d99a2b;
+  --deep: #4b2118;
+  --accent-soft: #fdf1ef;
+  --ink: #24211d;
+  --muted: #7a736a;
+  --line: #e8e2d9;
+  --ok: #1e7d47;
+  font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  color: var(--ink);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(circle at top, #fffdf9 0, #faf7f2 45rem); min-height: 100vh; }
+
+.shell { max-width: 720px; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+
+nav { display: flex; justify-content: space-between; gap: 1rem; padding: 0.75rem 0; border-bottom: 2px solid var(--line); margin-bottom: 1.5rem; }
+nav a { color: var(--muted); text-decoration: none; font-weight: 600; }
+nav a.active { color: var(--accent); }
+
+h1 { font-size: clamp(1.65rem, 5vw, 2.35rem); line-height: 1.1; margin: 0 0 0.4rem; color: var(--deep); }
+h2 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; border-bottom: 1px solid var(--line); padding-bottom: 0.25rem; }
+h3 { color: var(--muted); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; margin: 1rem 0 0.25rem; }
+.subtitle { color: var(--muted); margin: 0 0 1.5rem; }
+.eyebrow { color: var(--accent); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+
+fieldset { border: 1px solid var(--line); border-radius: 8px; margin: 0 0 1rem; padding: 0.75rem 1rem; background: #fff; }
+legend { font-weight: 700; font-size: 0.9rem; padding: 0 0.4rem; }
+label { display: block; margin: 0.3rem 0; cursor: pointer; }
+.field-help { color: var(--muted); font-size: 0.78rem; margin: 0 0 0.55rem; }
+input[type="password"] { width: 100%; border: 1px solid var(--line); border-radius: 8px; font: inherit; padding: 0.7rem; margin: 0.4rem 0 1rem; }
+
+button {
+  background: var(--accent); color: #fff; border: 0; border-radius: 8px;
+  padding: 0.7rem 1.4rem; font-size: 1rem; font-weight: 700; cursor: pointer;
+}
+button:disabled { background: var(--muted); cursor: not-allowed; }
+button.secondary { background: #fff; color: var(--accent); border: 2px solid var(--accent); }
+button.warning { background: var(--gold); color: var(--deep); }
+button.link-button { background: transparent; color: var(--muted); padding: 0.25rem; font-size: 0.8rem; }
+
+.counter { font-size: 3rem; font-weight: 800; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+.stat { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 0.75rem; }
+.stat .value { font-size: 1.4rem; font-weight: 800; }
+.stat .label { color: var(--muted); font-size: 0.8rem; }
+
+.badge { display: inline-block; background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 0.1rem 0.6rem; font-size: 0.75rem; font-weight: 700; margin: 0 0.25rem 0.25rem 0; }
+.badge.ok { background: #ecf7f0; color: var(--ok); }
+
+.dish { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 0.75rem 1rem; margin: 0.5rem 0; }
+.dish .name { font-weight: 700; }
+.dish .desc { color: var(--muted); font-size: 0.9rem; margin: 0.2rem 0 0.4rem; }
+
+.notice { background: var(--accent-soft); border-left: 4px solid var(--accent); padding: 0.75rem 1rem; border-radius: 4px; margin: 1rem 0; }
+.disclaimer { color: var(--muted); font-size: 0.8rem; margin-top: 2rem; font-style: italic; }
+.error { color: var(--accent); font-weight: 600; }
+.success { color: var(--ok); font-weight: 600; }
+
+.center-stage { text-align: center; padding: 3.5rem 1rem; }
+.chef-mark { width: 4.5rem; height: 4.5rem; display: grid; place-items: center; margin: 0 auto 1.2rem; border: 3px solid var(--gold); border-radius: 50%; color: var(--accent); font-weight: 900; font-size: 1.3rem; background: #fff; box-shadow: 0 8px 30px rgb(75 33 24 / 10%); }
+.loader { width: 2.5rem; height: 2.5rem; margin: 1rem auto; border: 4px solid var(--line); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.cycle { color: var(--muted); font-size: 0.72rem; margin-top: 2rem; }
+.presenter-heading { display: flex; justify-content: space-between; gap: 1rem; align-items: start; }
+.state-card { display: flex; justify-content: space-between; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 1rem; }
+.state { font-size: 0.75rem; font-weight: 900; letter-spacing: 0.08em; border-radius: 999px; padding: 0.3rem 0.7rem; background: var(--line); }
+.state-open { color: var(--ok); background: #ecf7f0; }
+.state-generating { color: #8a5a00; background: #fff3d5; }
+.state-published { color: #28509b; background: #edf3ff; }
+.controls { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+.controls button { font-size: 0.85rem; padding: 0.6rem 0.8rem; }
+.trace { background: #2b2926; color: #f6f0e7; border-radius: 8px; padding: 1rem 1rem 1rem 2.2rem; font: 0.76rem/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; }
+.public-trace { text-align: left; max-width: 34rem; margin: 1.5rem auto; }
+.login { max-width: 28rem; margin: 3rem auto; padding: 1.5rem; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.fallback-banner { background: #fff3d5; border: 2px solid var(--gold); color: var(--deep); padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+
+@media (max-width: 520px) {
+  .shell { padding-top: 0.5rem; }
+  fieldset { padding: 0.7rem; }
+  .presenter-heading { display: block; }
+  .controls button { width: 100%; }
+}

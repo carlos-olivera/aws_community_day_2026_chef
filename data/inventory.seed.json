@@ -1,0 +1,772 @@
+[
+  {
+    "ingredient_id": "quinoa",
+    "name": "Quinoa Real",
+    "category": "grain",
+    "quantity": 35,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "Altiplano Sur"
+  },
+  {
+    "ingredient_id": "amaranth",
+    "name": "Amaranth",
+    "category": "grain",
+    "quantity": 12,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "canahua",
+    "name": "Canahua",
+    "category": "grain",
+    "quantity": 8,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "rice",
+    "name": "Rice",
+    "category": "grain",
+    "quantity": 60,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": false,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "corn",
+    "name": "Choclo Corn",
+    "category": "grain",
+    "quantity": 40,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "large Andean kernels"
+  },
+  {
+    "ingredient_id": "purple_corn",
+    "name": "Purple Corn",
+    "category": "grain",
+    "quantity": 15,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "for api"
+  },
+  {
+    "ingredient_id": "corn_flour",
+    "name": "Corn Flour",
+    "category": "grain",
+    "quantity": 20,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "wheat_flour",
+    "name": "Wheat Flour",
+    "category": "grain",
+    "quantity": 30,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "lactose_free"
+    ],
+    "is_bolivian": false,
+    "notes": "contains gluten"
+  },
+  {
+    "ingredient_id": "oats",
+    "name": "Oats",
+    "category": "grain",
+    "quantity": 10,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "lactose_free"
+    ],
+    "is_bolivian": false,
+    "notes": "possible gluten traces"
+  },
+  {
+    "ingredient_id": "potato",
+    "name": "Native Potatoes",
+    "category": "tuber",
+    "quantity": 90,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "mixed varieties"
+  },
+  {
+    "ingredient_id": "chuno",
+    "name": "Chuno",
+    "category": "tuber",
+    "quantity": 18,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "freeze-dried potato"
+  },
+  {
+    "ingredient_id": "sweet_potato",
+    "name": "Camote",
+    "category": "tuber",
+    "quantity": 20,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "yuca",
+    "name": "Yuca",
+    "category": "tuber",
+    "quantity": 35,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "Santa Cruz lowlands"
+  },
+  {
+    "ingredient_id": "tarwi",
+    "name": "Tarwi",
+    "category": "legume",
+    "quantity": 14,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "Andean lupin, pre-soaked"
+  },
+  {
+    "ingredient_id": "broad_beans",
+    "name": "Broad Beans",
+    "category": "legume",
+    "quantity": 16,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "habas"
+  },
+  {
+    "ingredient_id": "black_beans",
+    "name": "Black Beans",
+    "category": "legume",
+    "quantity": 12,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": false,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "lentils",
+    "name": "Lentils",
+    "category": "legume",
+    "quantity": 10,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": false,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "peanut",
+    "name": "Peanuts",
+    "category": "legume",
+    "quantity": 25,
+    "unit": "kg",
+    "allergens": [
+      "peanut"
+    ],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "Bolivian-grown"
+  },
+  {
+    "ingredient_id": "tomato",
+    "name": "Tomatoes",
+    "category": "vegetable",
+    "quantity": 45,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "onion",
+    "name": "Onions",
+    "category": "vegetable",
+    "quantity": 40,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "garlic",
+    "name": "Garlic",
+    "category": "vegetable",
+    "quantity": 6,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "carrot",
+    "name": "Carrots",
+    "category": "vegetable",
+    "quantity": 30,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "spinach",
+    "name": "Spinach",
+    "category": "vegetable",
+    "quantity": 12,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "bell_pepper",
+    "name": "Bell Peppers",
+    "category": "vegetable",
+    "quantity": 15,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "squash",
+    "name": "Zapallo Squash",
+    "category": "vegetable",
+    "quantity": 25,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "locoto",
+    "name": "Locoto Chilli",
+    "category": "spice",
+    "quantity": 5,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "hot"
+  },
+  {
+    "ingredient_id": "aji_amarillo",
+    "name": "Aji Amarillo",
+    "category": "spice",
+    "quantity": 7,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "mild-fruity"
+  },
+  {
+    "ingredient_id": "cinnamon",
+    "name": "Cinnamon",
+    "category": "spice",
+    "quantity": 3,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": false,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "banana",
+    "name": "Bananas",
+    "category": "fruit",
+    "quantity": 50,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "Chapare"
+  },
+  {
+    "ingredient_id": "papaya",
+    "name": "Papayas",
+    "category": "fruit",
+    "quantity": 30,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "mango",
+    "name": "Mangoes",
+    "category": "fruit",
+    "quantity": 25,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "pineapple",
+    "name": "Pineapples",
+    "category": "fruit",
+    "quantity": 28,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "chirimoya",
+    "name": "Chirimoyas",
+    "category": "fruit",
+    "quantity": 12,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "achachairu",
+    "name": "Achachairu",
+    "category": "fruit",
+    "quantity": 15,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "Santa Cruz native"
+  },
+  {
+    "ingredient_id": "lime",
+    "name": "Limes",
+    "category": "fruit",
+    "quantity": 10,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "orange",
+    "name": "Oranges",
+    "category": "fruit",
+    "quantity": 20,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "milk",
+    "name": "Milk",
+    "category": "dairy",
+    "quantity": 60,
+    "unit": "l",
+    "allergens": [],
+    "dietary_flags": [
+      "vegetarian",
+      "gluten_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "cheese",
+    "name": "Quesillo Cheese",
+    "category": "dairy",
+    "quantity": 22,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegetarian",
+      "gluten_free"
+    ],
+    "is_bolivian": true,
+    "notes": "valley quesillo"
+  },
+  {
+    "ingredient_id": "butter",
+    "name": "Butter",
+    "category": "dairy",
+    "quantity": 8,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegetarian",
+      "gluten_free"
+    ],
+    "is_bolivian": false,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "yogurt",
+    "name": "Yogurt",
+    "category": "dairy",
+    "quantity": 15,
+    "unit": "l",
+    "allergens": [],
+    "dietary_flags": [
+      "vegetarian",
+      "gluten_free"
+    ],
+    "is_bolivian": false,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "egg",
+    "name": "Eggs",
+    "category": "protein",
+    "quantity": 600,
+    "unit": "units",
+    "allergens": [
+      "egg"
+    ],
+    "dietary_flags": [
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "beef",
+    "name": "Beef",
+    "category": "protein",
+    "quantity": 55,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "chicken",
+    "name": "Chicken",
+    "category": "protein",
+    "quantity": 45,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "llama_meat",
+    "name": "Llama Meat",
+    "category": "protein",
+    "quantity": 20,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "highland charque cut"
+  },
+  {
+    "ingredient_id": "trout",
+    "name": "Titicaca Trout",
+    "category": "protein",
+    "quantity": 18,
+    "unit": "kg",
+    "allergens": [
+      "fish"
+    ],
+    "dietary_flags": [
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "honey",
+    "name": "Honey",
+    "category": "other",
+    "quantity": 6,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": ""
+  },
+  {
+    "ingredient_id": "sugar",
+    "name": "Sugar",
+    "category": "other",
+    "quantity": 30,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "Santa Cruz cane"
+  },
+  {
+    "ingredient_id": "chocolate",
+    "name": "Bolivian Chocolate",
+    "category": "other",
+    "quantity": 10,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "Alto Beni cacao"
+  },
+  {
+    "ingredient_id": "coffee",
+    "name": "Coffee",
+    "category": "other",
+    "quantity": 8,
+    "unit": "kg",
+    "allergens": [],
+    "dietary_flags": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "is_bolivian": true,
+    "notes": "Yungas"
+  }
+]

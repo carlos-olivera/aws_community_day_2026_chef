@@ -1,0 +1,29 @@
+# Chef Andino - local policy rules (stand-in for AgentCore Policy / Cedar).
+#
+# Semantics, deliberately Cedar-shaped:
+#   * Default effect is DENY. Nothing is allowed unless a rule permits it.
+#   * A rule matches when principal and action match AND every key in `when`
+#     equals the corresponding key of the request context.
+#   * The first matching rule wins.
+#
+# The cloud-phase translation of each rule to Cedar is shown line-for-line
+# in docs/governance.md.
+
+- id: allow-validated-publish
+  effect: ALLOW
+  principal: agent/chef-andino
+  action: publish_menu
+  when:
+    validation_passed: true
+    event_state: GENERATING
+    snapshot_version_matches: true
+
+- id: allow-agent-reads
+  effect: ALLOW
+  principal: agent/chef-andino
+  action:
+    - read_snapshot
+    - read_inventory
+    - search_knowledge
+    - research_web
+    - evaluate_menu

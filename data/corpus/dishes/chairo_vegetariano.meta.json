@@ -1,0 +1,27 @@
+{
+  "type": "dish",
+  "name": "Chairo Vegetariano",
+  "course": "starter",
+  "tags": [
+    "soup",
+    "andean",
+    "bolivian"
+  ],
+  "ingredients": [
+    "chuno",
+    "potato",
+    "broad_beans",
+    "carrot",
+    "onion"
+  ],
+  "allergens": [],
+  "dietary_flags": [
+    "vegan",
+    "vegetarian",
+    "gluten_free",
+    "lactose_free"
+  ],
+  "spice_level": "mild",
+  "bolivian_origin": true,
+  "complexity": 2
+}

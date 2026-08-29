@@ -1,0 +1,24 @@
+{
+  "type": "dish",
+  "name": "Arroz con Leche",
+  "course": "dessert",
+  "tags": [
+    "classic",
+    "creamy",
+    "bolivian"
+  ],
+  "ingredients": [
+    "rice",
+    "milk",
+    "sugar",
+    "cinnamon"
+  ],
+  "allergens": [],
+  "dietary_flags": [
+    "vegetarian",
+    "gluten_free"
+  ],
+  "spice_level": "mild",
+  "bolivian_origin": true,
+  "complexity": 1
+}

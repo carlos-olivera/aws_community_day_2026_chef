@@ -1,0 +1,7 @@
+{
+  "app": "infra/.venv/bin/python infra/app.py",
+  "context": {
+    "@aws-cdk/core:checkRegion": false,
+    "@aws-cdk/core:defaultCrossStackReferences": "strong"
+  }
+}

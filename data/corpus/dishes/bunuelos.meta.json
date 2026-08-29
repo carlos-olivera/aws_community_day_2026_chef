@@ -1,0 +1,24 @@
+{
+  "type": "dish",
+  "name": "Bunuelos",
+  "course": "breakfast",
+  "tags": [
+    "breakfast",
+    "bolivian"
+  ],
+  "ingredients": [
+    "wheat_flour",
+    "egg",
+    "sugar"
+  ],
+  "allergens": [
+    "egg"
+  ],
+  "dietary_flags": [
+    "vegetarian",
+    "lactose_free"
+  ],
+  "spice_level": "mild",
+  "bolivian_origin": true,
+  "complexity": 2
+}

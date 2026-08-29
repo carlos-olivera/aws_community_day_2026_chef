@@ -1,0 +1,93 @@
+{
+  "$id": "https://chef-andino.example/schemas/inventory_item.schema.json",
+  "additionalProperties": false,
+  "description": "One ingredient actually available in the kitchen.\n\nThis is transactional state, so it lives behind a tool backed by a\ndatabase (DynamoDB in the cloud) - not in the RAG corpus. Semantic\nknowledge goes to RAG; real state goes to tools.",
+  "properties": {
+    "ingredient_id": {
+      "pattern": "^[a-z0-9_]+$",
+      "title": "Ingredient Id",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "category": {
+      "enum": [
+        "grain",
+        "tuber",
+        "vegetable",
+        "fruit",
+        "protein",
+        "dairy",
+        "spice",
+        "herb",
+        "legume",
+        "other"
+      ],
+      "title": "Category",
+      "type": "string"
+    },
+    "quantity": {
+      "minimum": 0,
+      "title": "Quantity",
+      "type": "number"
+    },
+    "unit": {
+      "enum": [
+        "kg",
+        "l",
+        "units"
+      ],
+      "title": "Unit",
+      "type": "string"
+    },
+    "allergens": {
+      "items": {
+        "enum": [
+          "peanut",
+          "tree_nuts",
+          "shellfish",
+          "fish",
+          "egg",
+          "soy"
+        ],
+        "type": "string"
+      },
+      "title": "Allergens",
+      "type": "array"
+    },
+    "dietary_flags": {
+      "items": {
+        "enum": [
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free"
+        ],
+        "type": "string"
+      },
+      "title": "Dietary Flags",
+      "type": "array"
+    },
+    "is_bolivian": {
+      "title": "Is Bolivian",
+      "type": "boolean"
+    },
+    "notes": {
+      "default": "",
+      "title": "Notes",
+      "type": "string"
+    }
+  },
+  "required": [
+    "ingredient_id",
+    "name",
+    "category",
+    "quantity",
+    "unit",
+    "is_bolivian"
+  ],
+  "title": "InventoryItem",
+  "type": "object"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "dish",
+  "name": "Flan de Chirimoya",
+  "course": "dessert",
+  "tags": [
+    "custard",
+    "fruit",
+    "bolivian"
+  ],
+  "ingredients": [
+    "chirimoya",
+    "egg",
+    "milk",
+    "sugar"
+  ],
+  "allergens": [
+    "egg"
+  ],
+  "dietary_flags": [
+    "vegetarian",
+    "gluten_free"
+  ],
+  "spice_level": "mild",
+  "bolivian_origin": true,
+  "complexity": 2
+}

@@ -1,0 +1,27 @@
+{
+  "type": "dish",
+  "name": "Silpancho Tradicional",
+  "course": "main",
+  "tags": [
+    "beef",
+    "cochabamba",
+    "bolivian"
+  ],
+  "ingredients": [
+    "beef",
+    "wheat_flour",
+    "egg",
+    "rice",
+    "potato",
+    "tomato"
+  ],
+  "allergens": [
+    "egg"
+  ],
+  "dietary_flags": [
+    "lactose_free"
+  ],
+  "spice_level": "mild",
+  "bolivian_origin": true,
+  "complexity": 2
+}

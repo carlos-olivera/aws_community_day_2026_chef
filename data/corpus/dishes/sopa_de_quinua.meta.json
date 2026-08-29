@@ -1,0 +1,26 @@
+{
+  "type": "dish",
+  "name": "Sopa de Quinua",
+  "course": "starter",
+  "tags": [
+    "soup",
+    "quinoa",
+    "bolivian"
+  ],
+  "ingredients": [
+    "quinoa",
+    "potato",
+    "carrot",
+    "onion"
+  ],
+  "allergens": [],
+  "dietary_flags": [
+    "vegan",
+    "vegetarian",
+    "gluten_free",
+    "lactose_free"
+  ],
+  "spice_level": "mild",
+  "bolivian_origin": true,
+  "complexity": 1
+}

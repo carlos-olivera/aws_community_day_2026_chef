@@ -1,0 +1,25 @@
+{
+  "type": "dish",
+  "name": "Cunape",
+  "course": "breakfast",
+  "tags": [
+    "breakfast",
+    "santa cruz",
+    "bolivian"
+  ],
+  "ingredients": [
+    "yuca",
+    "cheese",
+    "egg"
+  ],
+  "allergens": [
+    "egg"
+  ],
+  "dietary_flags": [
+    "vegetarian",
+    "gluten_free"
+  ],
+  "spice_level": "mild",
+  "bolivian_origin": true,
+  "complexity": 2
+}

@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Local runtime state (the "database" of the offline demo)
+.localdata/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# CDK
+cdk.out/
+infra/cdk.out/
+infra/.venv/
+.cloud/
+
+# Python packaging
+build/
+dist/
+
+# Environment
+.env
+*.log
+
+# OS / editor noise
+.DS_Store
+.idea/
+.vscode/
+.playwright-cli/
+.claude/

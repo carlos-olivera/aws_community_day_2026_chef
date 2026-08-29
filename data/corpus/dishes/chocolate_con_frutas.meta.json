@@ -1,0 +1,25 @@
+{
+  "type": "dish",
+  "name": "Chocolate Boliviano con Frutas",
+  "course": "dessert",
+  "tags": [
+    "chocolate",
+    "fruit",
+    "bolivian"
+  ],
+  "ingredients": [
+    "chocolate",
+    "banana",
+    "mango"
+  ],
+  "allergens": [],
+  "dietary_flags": [
+    "vegan",
+    "vegetarian",
+    "gluten_free",
+    "lactose_free"
+  ],
+  "spice_level": "mild",
+  "bolivian_origin": true,
+  "complexity": 1
+}

@@ -1,0 +1,27 @@
+{
+  "type": "dish",
+  "name": "Quinoa Breakfast Porridge",
+  "course": "breakfast",
+  "tags": [
+    "breakfast",
+    "quinoa",
+    "buffet",
+    "bolivian"
+  ],
+  "ingredients": [
+    "quinoa",
+    "banana",
+    "sugar",
+    "cinnamon"
+  ],
+  "allergens": [],
+  "dietary_flags": [
+    "vegan",
+    "vegetarian",
+    "gluten_free",
+    "lactose_free"
+  ],
+  "spice_level": "mild",
+  "bolivian_origin": true,
+  "complexity": 1
+}

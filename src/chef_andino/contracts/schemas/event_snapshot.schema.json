@@ -1,0 +1,213 @@
+{
+  "$id": "https://chef-andino.example/schemas/event_snapshot.schema.json",
+  "$defs": {
+    "DerivedConstraints": {
+      "additionalProperties": false,
+      "description": "Raw counts turned into machine-checkable rules.\n\nDerivation rules (see docs/data-contracts.md):\n\n* Any allergen declared by at least one person is excluded event-wide.\n  Deliberately conservative - real catering would label per dish.\n* Any vegetarian or vegan respondent means one of the two lunch mains\n  must be vegetarian - and because dinner has a SINGLE main, that main\n  must be vegetarian too (the \"one option must fit everyone\" insight).\n* ``max_default_spice`` is the hottest level that at least 90% of\n  respondents can enjoy.",
+      "properties": {
+        "must_exclude_allergens": {
+          "items": {
+            "enum": [
+              "peanut",
+              "tree_nuts",
+              "shellfish",
+              "fish",
+              "egg",
+              "soy"
+            ],
+            "type": "string"
+          },
+          "title": "Must Exclude Allergens",
+          "type": "array"
+        },
+        "require_vegetarian_lunch_main": {
+          "title": "Require Vegetarian Lunch Main",
+          "type": "boolean"
+        },
+        "require_vegan_option_per_meal": {
+          "title": "Require Vegan Option Per Meal",
+          "type": "boolean"
+        },
+        "require_gluten_free_option_per_meal": {
+          "title": "Require Gluten Free Option Per Meal",
+          "type": "boolean"
+        },
+        "require_lactose_free_option_per_meal": {
+          "title": "Require Lactose Free Option Per Meal",
+          "type": "boolean"
+        },
+        "max_default_spice": {
+          "enum": [
+            "mild",
+            "medium",
+            "hot"
+          ],
+          "title": "Max Default Spice",
+          "type": "string"
+        }
+      },
+      "required": [
+        "must_exclude_allergens",
+        "require_vegetarian_lunch_main",
+        "require_vegan_option_per_meal",
+        "require_gluten_free_option_per_meal",
+        "require_lactose_free_option_per_meal",
+        "max_default_spice"
+      ],
+      "title": "DerivedConstraints",
+      "type": "object"
+    },
+    "IngredientCount": {
+      "additionalProperties": false,
+      "description": "How many people named this ingredient as a favourite.",
+      "properties": {
+        "ingredient": {
+          "enum": [
+            "quinoa",
+            "potato",
+            "corn",
+            "aji_amarillo",
+            "llama_meat",
+            "trout",
+            "chuno",
+            "broad_beans",
+            "amaranth",
+            "peanut"
+          ],
+          "title": "Ingredient",
+          "type": "string"
+        },
+        "count": {
+          "minimum": 1,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "ingredient",
+        "count"
+      ],
+      "title": "IngredientCount",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "The frozen, anonymous aggregate that is the agent's ONLY view of people.\n\nIndividual responses never reach the LLM: fewer tokens, no PII exposure,\nno injection surface, and a reproducible run (``snapshot_version``).",
+  "properties": {
+    "event_id": {
+      "title": "Event Id",
+      "type": "string"
+    },
+    "snapshot_version": {
+      "minimum": 1,
+      "title": "Snapshot Version",
+      "type": "integer"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "total_responses": {
+      "minimum": 1,
+      "title": "Total Responses",
+      "type": "integer"
+    },
+    "diet_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "enum": [
+          "none",
+          "vegetarian",
+          "vegan"
+        ]
+      },
+      "title": "Diet Counts",
+      "type": "object"
+    },
+    "lactose_intolerant_count": {
+      "minimum": 0,
+      "title": "Lactose Intolerant Count",
+      "type": "integer"
+    },
+    "gluten_free_count": {
+      "minimum": 0,
+      "title": "Gluten Free Count",
+      "type": "integer"
+    },
+    "allergen_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "enum": [
+          "peanut",
+          "tree_nuts",
+          "shellfish",
+          "fish",
+          "egg",
+          "soy"
+        ]
+      },
+      "title": "Allergen Counts",
+      "type": "object"
+    },
+    "spice_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "enum": [
+          "mild",
+          "medium",
+          "hot"
+        ]
+      },
+      "title": "Spice Counts",
+      "type": "object"
+    },
+    "cuisine_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "enum": [
+          "traditional_bolivian",
+          "andean_fusion",
+          "international",
+          "no_preference"
+        ]
+      },
+      "title": "Cuisine Counts",
+      "type": "object"
+    },
+    "top_preferred_ingredients": {
+      "items": {
+        "$ref": "#/$defs/IngredientCount"
+      },
+      "title": "Top Preferred Ingredients",
+      "type": "array"
+    },
+    "derived_constraints": {
+      "$ref": "#/$defs/DerivedConstraints"
+    }
+  },
+  "required": [
+    "event_id",
+    "snapshot_version",
+    "created_at",
+    "total_responses",
+    "diet_counts",
+    "lactose_intolerant_count",
+    "gluten_free_count",
+    "allergen_counts",
+    "spice_counts",
+    "cuisine_counts",
+    "top_preferred_ingredients",
+    "derived_constraints"
+  ],
+  "title": "EventSnapshot",
+  "type": "object"
+}

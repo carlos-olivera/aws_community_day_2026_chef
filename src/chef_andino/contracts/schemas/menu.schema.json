@@ -1,0 +1,460 @@
+{
+  "$id": "https://chef-andino.example/schemas/menu.schema.json",
+  "$defs": {
+    "Breakfast": {
+      "additionalProperties": false,
+      "description": "Breakfast is a simple buffet: 4 to 8 self-service items.",
+      "properties": {
+        "style": {
+          "const": "buffet",
+          "title": "Style",
+          "type": "string"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/MenuItem"
+          },
+          "maxItems": 8,
+          "minItems": 4,
+          "title": "Items",
+          "type": "array"
+        }
+      },
+      "required": [
+        "style",
+        "items"
+      ],
+      "title": "Breakfast",
+      "type": "object"
+    },
+    "Check": {
+      "additionalProperties": false,
+      "description": "One named validator rule and whether the menu passed it.",
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "passed": {
+          "title": "Passed",
+          "type": "boolean"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "passed",
+        "message"
+      ],
+      "title": "Check",
+      "type": "object"
+    },
+    "Coverage": {
+      "additionalProperties": false,
+      "description": "Computed (never LLM-claimed) facts about who the menu serves.",
+      "properties": {
+        "vegetarian_lunch_main": {
+          "title": "Vegetarian Lunch Main",
+          "type": "boolean"
+        },
+        "vegan_option_per_meal": {
+          "title": "Vegan Option Per Meal",
+          "type": "boolean"
+        },
+        "gluten_free_option_per_meal": {
+          "title": "Gluten Free Option Per Meal",
+          "type": "boolean"
+        },
+        "lactose_free_option_per_meal": {
+          "title": "Lactose Free Option Per Meal",
+          "type": "boolean"
+        },
+        "preferred_ingredients_used": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Preferred Ingredients Used",
+          "type": "array"
+        },
+        "bolivian_ingredient_ratio": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Bolivian Ingredient Ratio",
+          "type": "number"
+        }
+      },
+      "required": [
+        "vegetarian_lunch_main",
+        "vegan_option_per_meal",
+        "gluten_free_option_per_meal",
+        "lactose_free_option_per_meal",
+        "preferred_ingredients_used",
+        "bolivian_ingredient_ratio"
+      ],
+      "title": "Coverage",
+      "type": "object"
+    },
+    "Dinner": {
+      "additionalProperties": false,
+      "description": "Dinner: a SINGLE main (it must fit everyone) and one dessert.",
+      "properties": {
+        "main": {
+          "$ref": "#/$defs/MenuItem"
+        },
+        "dessert": {
+          "$ref": "#/$defs/MenuItem"
+        }
+      },
+      "required": [
+        "main",
+        "dessert"
+      ],
+      "title": "Dinner",
+      "type": "object"
+    },
+    "EvaluationResult": {
+      "additionalProperties": false,
+      "description": "Output of the ``evaluate_menu`` tool (the agent's own compass).",
+      "properties": {
+        "total_score": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Total Score",
+          "type": "number"
+        },
+        "breakdown": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Breakdown",
+          "type": "object"
+        },
+        "hard_gates_passed": {
+          "title": "Hard Gates Passed",
+          "type": "boolean"
+        },
+        "failed_gates": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Failed Gates",
+          "type": "array"
+        }
+      },
+      "required": [
+        "total_score",
+        "breakdown",
+        "hard_gates_passed"
+      ],
+      "title": "EvaluationResult",
+      "type": "object"
+    },
+    "Lunch": {
+      "additionalProperties": false,
+      "description": "Lunch: one starter, exactly two mains to choose from, one dessert.",
+      "properties": {
+        "starter": {
+          "$ref": "#/$defs/MenuItem"
+        },
+        "mains": {
+          "items": {
+            "$ref": "#/$defs/MenuItem"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Mains",
+          "type": "array"
+        },
+        "dessert": {
+          "$ref": "#/$defs/MenuItem"
+        }
+      },
+      "required": [
+        "starter",
+        "mains",
+        "dessert"
+      ],
+      "title": "Lunch",
+      "type": "object"
+    },
+    "Meals": {
+      "additionalProperties": false,
+      "description": "The three meals of the event day.",
+      "properties": {
+        "breakfast": {
+          "$ref": "#/$defs/Breakfast"
+        },
+        "lunch": {
+          "$ref": "#/$defs/Lunch"
+        },
+        "dinner": {
+          "$ref": "#/$defs/Dinner"
+        }
+      },
+      "required": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "title": "Meals",
+      "type": "object"
+    },
+    "MenuItem": {
+      "additionalProperties": false,
+      "description": "One dish on the menu, with everything the validator needs to check it.",
+      "properties": {
+        "dish_id": {
+          "title": "Dish Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "maxLength": 300,
+          "title": "Description",
+          "type": "string"
+        },
+        "ingredients": {
+          "description": "inventory ingredient_ids",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Ingredients",
+          "type": "array"
+        },
+        "allergens": {
+          "items": {
+            "enum": [
+              "peanut",
+              "tree_nuts",
+              "shellfish",
+              "fish",
+              "egg",
+              "soy"
+            ],
+            "type": "string"
+          },
+          "title": "Allergens",
+          "type": "array"
+        },
+        "dietary_flags": {
+          "items": {
+            "enum": [
+              "vegan",
+              "vegetarian",
+              "gluten_free",
+              "lactose_free"
+            ],
+            "type": "string"
+          },
+          "title": "Dietary Flags",
+          "type": "array"
+        },
+        "spice_level": {
+          "enum": [
+            "mild",
+            "medium",
+            "hot"
+          ],
+          "title": "Spice Level",
+          "type": "string"
+        },
+        "bolivian_origin": {
+          "title": "Bolivian Origin",
+          "type": "boolean"
+        },
+        "complexity": {
+          "description": "1 = trivial, 3 = demanding",
+          "maximum": 3,
+          "minimum": 1,
+          "title": "Complexity",
+          "type": "integer"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/SourceRef"
+          },
+          "title": "Sources",
+          "type": "array"
+        }
+      },
+      "required": [
+        "dish_id",
+        "name",
+        "description",
+        "ingredients",
+        "spice_level",
+        "bolivian_origin",
+        "complexity"
+      ],
+      "title": "MenuItem",
+      "type": "object"
+    },
+    "SourceRef": {
+      "additionalProperties": false,
+      "description": "Where a dish came from: the knowledge base, the web, or a template.",
+      "properties": {
+        "type": {
+          "enum": [
+            "knowledge_base",
+            "web",
+            "template"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "ref": {
+          "title": "Ref",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "ref"
+      ],
+      "title": "SourceRef",
+      "type": "object"
+    },
+    "ValidationReport": {
+      "additionalProperties": false,
+      "description": "Output of the deterministic validator (the door the menu must pass).",
+      "properties": {
+        "passed": {
+          "title": "Passed",
+          "type": "boolean"
+        },
+        "validator_version": {
+          "title": "Validator Version",
+          "type": "string"
+        },
+        "checks": {
+          "items": {
+            "$ref": "#/$defs/Check"
+          },
+          "title": "Checks",
+          "type": "array"
+        }
+      },
+      "required": [
+        "passed",
+        "validator_version",
+        "checks"
+      ],
+      "title": "ValidationReport",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "The final structured output of a Chef Andino run.\n\n``evaluation`` and ``validation`` are ``None`` on candidate menus and are\nattached by the evaluate and publish tools respectively - the agent cannot\nfabricate them in its own favour.",
+  "properties": {
+    "menu_id": {
+      "title": "Menu Id",
+      "type": "string"
+    },
+    "event_id": {
+      "title": "Event Id",
+      "type": "string"
+    },
+    "cycle": {
+      "default": 1,
+      "minimum": 1,
+      "title": "Cycle",
+      "type": "integer"
+    },
+    "run_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Run Id"
+    },
+    "generation_mode": {
+      "default": "live_agentcore",
+      "enum": [
+        "live_agentcore",
+        "fallback_last_good"
+      ],
+      "title": "Generation Mode",
+      "type": "string"
+    },
+    "snapshot_version": {
+      "minimum": 1,
+      "title": "Snapshot Version",
+      "type": "integer"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "disclaimer": {
+      "const": "Men\u00fa de demostraci\u00f3n generado por IA (Chef Andino, AWS Community Day). No fue revisado por un nutricionista; el manejo de al\u00e9rgenos es solo ilustrativo.",
+      "title": "Disclaimer",
+      "type": "string"
+    },
+    "meals": {
+      "$ref": "#/$defs/Meals"
+    },
+    "coverage": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Coverage"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "evaluation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/EvaluationResult"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "validation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ValidationReport"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Warnings",
+      "type": "array"
+    }
+  },
+  "required": [
+    "menu_id",
+    "event_id",
+    "snapshot_version",
+    "generated_at",
+    "disclaimer",
+    "meals"
+  ],
+  "title": "Menu",
+  "type": "object"
+}

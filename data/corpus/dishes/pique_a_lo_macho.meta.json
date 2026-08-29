@@ -1,0 +1,26 @@
+{
+  "type": "dish",
+  "name": "Pique a lo Macho",
+  "course": "main",
+  "tags": [
+    "beef",
+    "cochabamba",
+    "events",
+    "bolivian"
+  ],
+  "ingredients": [
+    "beef",
+    "potato",
+    "tomato",
+    "onion",
+    "locoto"
+  ],
+  "allergens": [],
+  "dietary_flags": [
+    "gluten_free",
+    "lactose_free"
+  ],
+  "spice_level": "medium",
+  "bolivian_origin": true,
+  "complexity": 3
+}

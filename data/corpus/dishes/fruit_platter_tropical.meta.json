@@ -1,0 +1,26 @@
+{
+  "type": "dish",
+  "name": "Tropical Fruit Platter",
+  "course": "breakfast",
+  "tags": [
+    "breakfast",
+    "fruit",
+    "bolivian"
+  ],
+  "ingredients": [
+    "banana",
+    "papaya",
+    "pineapple",
+    "achachairu"
+  ],
+  "allergens": [],
+  "dietary_flags": [
+    "vegan",
+    "vegetarian",
+    "gluten_free",
+    "lactose_free"
+  ],
+  "spice_level": "mild",
+  "bolivian_origin": true,
+  "complexity": 1
+}
